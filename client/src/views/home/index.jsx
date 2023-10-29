@@ -1,8 +1,11 @@
 import React, { memo } from 'react'
+import { HomeStyled } from './style'
 
 const Home = memo(() => {
     return (
-        <div>Home</div>
+        <HomeStyled>
+            <div></div>
+        </HomeStyled>
     )
 })
 
