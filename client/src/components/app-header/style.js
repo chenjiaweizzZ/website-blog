@@ -14,26 +14,79 @@ const AppHeaderStyled = styled.div`
       font-weight: 500;
       font-size: 30px;
       margin-left: 20px;
+      
     }
+    button {
+      z-index: 1;
+      font-size: 30px;
+      /* font-family: inherit; */
+      color: black;
+      padding: 0.5em 1em;
+      outline: none;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.0);
+      }
+
+      button:hover {
+      cursor: pointer;
+      animation: logo 0.5s;
+      }
+
+      @keyframes logo {
+      0%,
+      100% {
+         transform: scale(1, 1);
+      }
+      25% {
+         transform: scale(0.9, 1.1);
+      }
+      50% {
+         transform: scale(1.1, 0.9);
+      }
+      75% {
+         transform: scale(0.95, 1.05);
+      }
+      }
    }
    .header-right {
     line-height: 70px;
     display: flex;
-    .menu-item {
-      border-radius: 60px;
-      line-height: 50px;
+      span {
+      position: relative;
       cursor: pointer;
       width: 100px;
       text-align: center;
-      display:block;
-      transition:box-shadow 0.2s ease; 
-      font-weight: 500;
-      font-size: 16px;
-       &:hover {
-         background-color: #f5f5f5;
+         line-height: 50px;
       }
-    }
+      span::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: black;
+      transform-origin: bottom right;
+      transform: scaleX(0);
+      transition: transform 0.5s ease;
+      }
+
+      span:hover::before {
+      transform-origin: bottom left;
+      transform: scaleX(1);
+      }
     .menu-item2 {
+      /* position: relative; */
+      /* display: inline-block;
+      animation: spin 5s linear infinite;
+      }
+      @keyframes spin {
+      0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      } */
       border-radius: 50%;
       line-height: 50px;
       cursor: pointer;
@@ -66,7 +119,7 @@ const UserPopStyled = styled.div`
    }
 `
 
-export  {
+export {
    AppHeaderStyled,
    UserPopStyled
 }
