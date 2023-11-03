@@ -16,7 +16,9 @@ const AppHeader = memo((props) => {
                 {
                     menus.map(i => {
                         return (
-                            <span className='menu-item' key={i.key}>{i.label}</span>
+                            <span className='menu-item' key={i.key}>
+                                    {i.label}
+                                </span>
                             // <span className='menu-item' key={i.key}>{i.label}</span>
                         )
                     })

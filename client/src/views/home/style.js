@@ -31,10 +31,32 @@ const HomeStyled = styled.div`
         }
     }
     .name1 {
-        height: 40px;
-        line-height: 40px;
+        height: 60px;
+        line-height: 60px;
         text-align: center;
         font-size: 28px;
+        p:hover {
+            animation: heartBeat 1s;
+        }
+        @keyframes heartBeat {
+            from,
+  to {
+    transform: translate3d(0, 0, 0);
+            }
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translate3d(0, -0.5rem, 0);
+            }
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translate3d(0, 0.5rem, 0);
+            }
+        }
     }
     .name2 {
         height: 40px;

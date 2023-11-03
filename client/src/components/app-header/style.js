@@ -14,7 +14,6 @@ const AppHeaderStyled = styled.div`
       font-weight: 500;
       font-size: 30px;
       margin-left: 20px;
-      
     }
     button {
       z-index: 1;

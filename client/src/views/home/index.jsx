@@ -9,7 +9,7 @@ const Home = memo(() => {
                 <img src={require('@/assets/image/avator.PNG')} alt='avator'/>
             </div>
             <div className='home-name name1'>
-                陈家伟的博客
+                <p>陈家伟的博客</p>
             </div>
             <div className='home-name name2'>
                 Jern Chan
